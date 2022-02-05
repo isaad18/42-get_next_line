@@ -20,20 +20,25 @@ char	*ft_line(char *str)
 	i = 0;
 	if (!str)
 		return (NULL);
-	while (str[i] && str[i] != '\n')
+	while (str[i] != '\0' && str[i] != '\n')
 		i++;
-	s = (char *)malloc(i + 2);
+	if (str[i] == '\n')
+		s = (char *)malloc(i + 2);
+	else
+		s = (char *)malloc(i + 1);
 	if (!s)
 		return (NULL);
 	i = 0;
-	while (str[i] && str[i] != '\n')
+	while (str[i] != '\0' && str[i] != '\n')
 	{
 		s[i] = str[i];
 		i++;
 	}
 	if (str[i] == '\n')
+	{
 		s[i] = str[i];
-	i++;
+		i++;
+	}
 	s[i] = '\0';
 	return (s);
 }
@@ -48,7 +53,7 @@ char	*ft_next(char *str)
 	j = 0;
 	while (str[i] && str[i] != '\n')
 		i++;
-	if (!str)
+	if (!str[i])
 	{
 		free (str);
 		return (NULL);
@@ -56,6 +61,7 @@ char	*ft_next(char *str)
 	s = (char *)malloc(ft_strlen(str) - i + 1);
 	if (!s)
 		return (NULL);
+	i++;
 	while (str[i])
 		s[j++] = str[i++];
 	s[j] = '\0';
@@ -82,6 +88,12 @@ char	*ft_read(int fd, char *new)
 		}
 		s[i] = '\0';
 		new = ft_strjoin(new, s);
+	}
+	if (new[0] == '\0')
+	{
+		free (new);
+		free (s);
+		return (NULL);
 	}
 	free (s);
 	return (new);

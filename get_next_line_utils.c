@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	if (!s)
-		return (NULL);
+		return (0);
 	while (s[i])
 	{
 		if (s[i] == (char )c)
@@ -39,7 +39,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (s[i] == (char )c)
 		return ((char *)(s + i));
-	return (NULL);
+	return (0);
 }
 
 char	*ft_strjoin(char *s1, char *s2)

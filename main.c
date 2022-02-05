@@ -4,10 +4,9 @@
 int	main(void)
 {
 	int i;
-	char *s;
 
 	i = open("hi.txt", O_RDONLY);
-	s = get_next_line(i);
-	printf("%s", s);
+	printf("%s", get_next_line(i));
+	printf("%s", get_next_line(i));
 	return (i);
 }
