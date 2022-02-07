@@ -53,7 +53,7 @@ char	*ft_next(char *str)
 	j = 0;
 	while (str[i] && str[i] != '\n')
 		i++;
-	if (!str[i])
+	if (str[i] == '\0')
 	{
 		free (str);
 		return (NULL);
@@ -110,6 +110,8 @@ char	*get_next_line(int fd)
 	if (!str)
 		return (NULL);
 	final = ft_line(str);
+	if (!str)
+		return (final);
 	str = ft_next(str);
 	return (final);
 }
