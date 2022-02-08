@@ -1,4 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/07 23:54:42 by isaad             #+#    #+#             */
+/*   Updated: 2022/02/07 23:54:44 by isaad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"get_next_line_bonus.h"
+
+char	*freeme(char *s, char *str)
+{
+	free (s);
+	free (str);
+	return (NULL);
+}
 
 char	*ft_line(char *str)
 {
@@ -10,10 +29,7 @@ char	*ft_line(char *str)
 		return (NULL);
 	while (str[i] != '\0' && str[i] != '\n')
 		i++;
-	if (str[i] == '\n')
-		s = (char *)malloc(i + 2);
-	else
-		s = (char *)malloc(i + 1);
+	s = (char *)malloc(i + 2);
 	if (!s)
 		return (NULL);
 	i = 0;
@@ -79,8 +95,7 @@ char	*ft_read(int fd, char *new)
 	}
 	if (new[0] == '\0')
 	{
-		free (new);
-		free (s);
+		freeme(s, new);
 		return (NULL);
 	}
 	free (s);

@@ -6,11 +6,18 @@
 /*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 07:35:36 by isaad             #+#    #+#             */
-/*   Updated: 2022/02/05 08:20:49 by isaad            ###   ########.fr       */
+/*   Updated: 2022/02/07 23:51:20 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"get_next_line.h"
+
+char	*freeme(char *s, char *str)
+{
+	free (s);
+	free (str);
+	return (NULL);
+}
 
 char	*ft_line(char *str)
 {
@@ -22,10 +29,7 @@ char	*ft_line(char *str)
 		return (NULL);
 	while (str[i] != '\0' && str[i] != '\n')
 		i++;
-	if (str[i] == '\n')
-		s = (char *)malloc(i + 2);
-	else
-		s = (char *)malloc(i + 1);
+	s = (char *)malloc(i + 2);
 	if (!s)
 		return (NULL);
 	i = 0;
@@ -91,8 +95,7 @@ char	*ft_read(int fd, char *new)
 	}
 	if (new[0] == '\0')
 	{
-		free (new);
-		free (s);
+		freeme(s, new);
 		return (NULL);
 	}
 	free (s);
