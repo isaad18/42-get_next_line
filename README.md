@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-	<b><i>Reading a line on a fd is way too tedious</i></b><br>
+	<b><i>Reading a line on a fd</i></b><br>
 </p>
 
 <p align="center">
