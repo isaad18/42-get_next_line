@@ -8,10 +8,10 @@
 </p>
 
 <p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/jdecorte-be/42-Get-next-line?color=lightblue" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/jdecorte-be/42-Get-next-line?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jdecorte-be/42-Get-next-line?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jdecorte-be/42-Get-next-line?color=green" />
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/isaad18/42-Get_next_line?color=lightblue" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/isaad18/42-Get_next_line?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/isaad18/42-Get_next_line?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/isaad18/42-Get_next_line?color=green" />
 </p>
 
 <h3 align="center">
