@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:55:03 by isaad             #+#    #+#             */
-/*   Updated: 2022/02/07 23:55:06 by isaad            ###   ########.fr       */
+/*   Updated: 2022/11/03 13:07:40 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "../includes/get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {

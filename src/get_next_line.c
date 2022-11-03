@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 23:54:42 by isaad             #+#    #+#             */
-/*   Updated: 2022/02/07 23:54:44 by isaad            ###   ########.fr       */
+/*   Created: 2022/02/05 07:35:36 by isaad             #+#    #+#             */
+/*   Updated: 2022/11/03 13:08:05 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"get_next_line_bonus.h"
+#include"../includes/get_next_line.h"
 
 char	*freeme(char *s, char *str)
 {
@@ -104,17 +104,17 @@ char	*ft_read(int fd, char *new)
 
 char	*get_next_line(int fd)
 {
-	static char	*str[OPEN_MAX];
+	static char	*str;
 	char		*final;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	str[fd] = ft_read(fd, str[fd]);
-	if (!str[fd])
+	str = ft_read(fd, str);
+	if (!str)
 		return (NULL);
-	final = ft_line(str[fd]);
-	if (!str[fd])
+	final = ft_line(str);
+	if (!str)
 		return (final);
-	str[fd] = ft_next(str[fd]);
+	str = ft_next(str);
 	return (final);
 }

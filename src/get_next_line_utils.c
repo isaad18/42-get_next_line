@@ -6,11 +6,11 @@
 /*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 04:11:27 by isaad             #+#    #+#             */
-/*   Updated: 2022/02/07 23:34:29 by isaad            ###   ########.fr       */
+/*   Updated: 2022/11/03 13:08:05 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
 size_t	ft_strlen(const char *s)
 {
